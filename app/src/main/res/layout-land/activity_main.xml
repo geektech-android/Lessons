@@ -9,32 +9,29 @@
     <fragment
         android:id="@+id/button_fragment"
         android:name="com.akai.geektech.practiclessons.fragments.ButtonFragment"
-        android:layout_width="match_parent"
+        android:layout_width="199dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        tools:layout="@layout/button_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/button_fragment" />
 
     <fragment
         android:id="@+id/checkbox_fragment"
         android:name="com.akai.geektech.practiclessons.fragments.CheckBoxFragment"
-        android:layout_width="match_parent"
+        android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        tools:layout="@layout/checkbox_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_fragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_fragment" />
+        app:layout_constraintTop_toBottomOf="@+id/button_fragment"
+        tools:layout="@layout/checkbox_fragment" />
 
     <fragment
         android:id="@+id/image_fragment"
@@ -46,11 +43,12 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_fragment"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:layout="@layout/image_fragment" />
 
 </android.support.constraint.ConstraintLayout>
