@@ -19,7 +19,7 @@ public class FragmentListMovie extends Fragment {
         try {
             listener = (OnFragmentInteractionListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString() + " must implemented xxxListener");
+            throw new ClassCastException(context.toString() + " must implemented OnFragmentInteractionListenerListener");
         }
     }
 
