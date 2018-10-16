@@ -1,8 +1,10 @@
 package com.akai.geektech.practiclessons;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class Main2Activity extends AppCompatActivity {
     private static final String TAG = "TestMain2Activity";
@@ -48,5 +50,12 @@ public class Main2Activity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+    }
+
+    public void onClick(View view) {
+        Intent intent = new Intent();
+        intent.putExtra("key_text", "This is text from SecondActivity");
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }
