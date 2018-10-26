@@ -14,7 +14,7 @@
         android:name="com.akai.geektech.practiclessons.StaticFragment"
         tools:layout="@layout/fragment_statilc"/>
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
