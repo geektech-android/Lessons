@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BananaActivity"></activity>
+        <activity android:name=".AppleActivity">
+            <intent-filter>
+                <action android:name="com.akai.geektech.practiclessons.THIRD_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
