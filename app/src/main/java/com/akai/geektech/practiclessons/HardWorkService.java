@@ -20,7 +20,7 @@ public class HardWorkService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("TAGGER", "onStartCommand");
         someTask();
-        return super.onStartCommand(intent, flags, startId);
+        return START_NOT_STICKY;
     }
 
     @Override
@@ -36,13 +36,20 @@ public class HardWorkService extends Service {
     }
 
     private void someTask() {
-        for (int i = 0; i < 10; i++) {
-            try {
-                Log.d("TAGGER", "i: " + i);
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                for (int i = 0; i < 100; i++) {
+                    try {
+                        Log.d("TAGGER", "i: " + i);
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                stopSelf();
             }
-        }
+        }).start();
     }
 }

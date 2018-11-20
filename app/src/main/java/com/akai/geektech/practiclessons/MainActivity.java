@@ -42,14 +42,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void startHardWork() {
+        mProgress.setVisibility(View.VISIBLE);
         startService(new Intent(this, HardWorkService.class));
     }
 
     private void stopHardWork() {
+        mProgress.setVisibility(View.GONE);
         stopService(new Intent(this, HardWorkService.class));
     }
 
     private void checkUiThread() {
-
+        mText.setText("Text is changed");
     }
 }
